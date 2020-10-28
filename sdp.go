@@ -126,6 +126,7 @@ var typeToStr = map[Type]string{
 	TypeTimeZones:          "time zones",
 	TypeEncryptionKey:      "encryption keys",
 	TypeMediaDescription:   "media description",
+	TypeSSRC:               "ssrc",
 }
 
 func (t Type) String() string {
@@ -154,6 +155,7 @@ const (
 	TypeEncryptionKey      Type = 'k'
 	TypeAttribute          Type = 'a'
 	TypeMediaDescription   Type = 'm'
+	TypeSSRC               Type = 'y'
 )
 
 // Session is set of Lines.

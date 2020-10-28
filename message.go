@@ -62,6 +62,7 @@ type Message struct {
 	BandwidthType BandwidthType
 	Timing        []Timing
 	TZAdjustments []TimeZone
+	SSRC          string
 }
 
 // Timing wraps "repeat times" and "timing" information.

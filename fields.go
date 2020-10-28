@@ -136,6 +136,9 @@ func (s Session) AddConnectionDataIP(ip net.IP) Session {
 func (s Session) AddSessionName(name string) Session {
 	return s.appendString(TypeSessionName, name)
 }
+func (s Session) AddSSRC(d string) Session {
+	return s.appendString(TypeSSRC, d)
+}
 
 // AddSessionInfo appends Session Information field to Session.
 func (s Session) AddSessionInfo(info string) Session {
@@ -330,7 +333,8 @@ func TimeToNTP(t time.Time) uint64 {
 	if t.IsZero() {
 		return 0
 	}
-	return uint64(t.Unix()) + ntpDelta
+	return uint64(t.Unix())
+	// return uint64(t.Unix()) + ntpDelta
 }
 
 // NTPToTime converts NTP timestamp to time.Time with special case for Zero

@@ -67,5 +67,6 @@ func (m *Message) Append(s Session) Session {
 		}
 		s = s.appendAttributes(m.Medias[i].Attributes)
 	}
+	s = s.AddSSRC(m.SSRC)
 	return s
 }
